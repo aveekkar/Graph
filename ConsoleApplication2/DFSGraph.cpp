@@ -13,6 +13,7 @@ typedef map<string, DFSGraph::Time>::const_iterator timeIter;
 
 void DFSGraph::traverse(const string& source)
 {
+	resetTraversal();
 	int nodeIndex;
 	if((nodeIndex = findNode(source)) == -1)
 	{
@@ -79,6 +80,18 @@ void DFSGraph::dfs(shared_ptr<Node> source)
 	timeMap.insert(pair<string, Time>(source->getName(), timeStruct));
 	source->status = Node::Status::black;
 	traversal.push_back(source->getName());
+}
+
+void DFSGraph::resetTraversal()
+{
+	for(vector<shared_ptr<Node> >::iterator i = mNodes.begin(); i != mNodes.end(); ++i)
+	{
+		(*i)->status = Node::Status::white;
+	}
+
+	traversal.clear();
+	path.clear();
+	timeMap.clear();
 }
 
 

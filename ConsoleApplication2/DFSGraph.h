@@ -22,6 +22,7 @@ public:
 	void printTraversal();
 	void pathsFromSource();
 	void printTimes();
+	void resetTraversal();
 private:
 	vector<string> traversal;
 	map<string, vector<string> > path;

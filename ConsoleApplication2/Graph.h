@@ -21,6 +21,7 @@ public:
 	void addNode(shared_ptr<Node> node);
 	bool init();
 	void printGraph();
+	virtual void resetTraversal() = 0;
 	virtual void traverse(const string& source) = 0;
 private:
 	bool mIsDirected;
