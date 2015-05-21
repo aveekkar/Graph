@@ -2,8 +2,9 @@
 #ifndef __BFS__
 #define __BFS__
 
+#include <string.h>
 #include "Graph.h"
-#include<set>
+#include <set>
 
 class BFSGraph : public Graph
 {

@@ -29,13 +29,14 @@ public:
 	vector<shared_ptr<Node> >& getList();
 	const string& getName();
 	const string& getName() const;
+    int distance;
+    shared_ptr<Node> parent;
 	
 private:
 	string mName;
 	int mOutDegree;
 	vector<shared_ptr<Node> > mEdges;
 	map<string, int> mWeights;
-
 	int findNode(const shared_ptr<Node>& node);
 };
 
