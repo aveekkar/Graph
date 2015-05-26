@@ -35,7 +35,7 @@ bool Node::setWeight(const shared_ptr<Node>& node, int weight)
 {
 	if(findNode(node) != -1)
 	{
-		mWeights[node->mName] = weight;
+		this->mWeights.emplace(pair<string, int>(node->mName, weight));
 		return true;
 	}
 

@@ -1,0 +1,17 @@
+Node:A-2
+Edges:B-2,C-7
+
+Node:B-3
+Edges:D-1,E-3,C-1
+
+Node:C-2
+Edges:E-2,F-22
+
+Node:D-0
+Edges:
+
+Node:E-1
+Edges:F-2
+
+Node:F-0
+Edges:

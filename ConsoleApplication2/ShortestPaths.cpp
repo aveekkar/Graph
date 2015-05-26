@@ -47,10 +47,10 @@ void ShortestPaths::traverse(const string& source)
         {
             if((*i)->status == Node::Status::white)
             {
-                if((vertex->distance + (*i)->getWeight(vertex->getName(), useLess)) < (*i)->distance)
+                if((vertex->distance + vertex->getWeight((*i)->getName(), useLess)) < (*i)->distance)
                 {
-                    cout<<"weight "<<vertex->getName()<<"->"<<(*i)->getName()<<" : "<<vertex->getWeight((*i)->getName(), useLess)<<endl;
-                    (*i)->distance = vertex->distance + (*i)->getWeight(vertex->getName(), useLess);
+                    //cout<<"weight "<<vertex->getName()<<"->"<<(*i)->getName()<<" : "<<vertex->getWeight((*i)->getName(), useLess)<<endl;
+                    (*i)->distance = vertex->distance + vertex->getWeight((*i)->getName(), useLess);
                     (*i)->parent = vertex;
                     workerQueue.push((*i));
                 }
@@ -70,6 +70,7 @@ void ShortestPaths::resetTraversal()
         (*i)->parent = NULL;
 	}
 }
+
 
 void ShortestPaths::printPaths()
 {

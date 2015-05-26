@@ -3,6 +3,9 @@
 #define __DFS__
 
 #include "Graph.h"
+#include <stack>
+
+using namespace std;
 
 class DFSGraph : public Graph
 {
@@ -23,6 +26,9 @@ public:
 	void pathsFromSource();
 	void printTimes();
 	void resetTraversal();
+	bool isDAG();
+	vector<shared_ptr<Node> > topologicalSort(const string& source, bool& isDAG);
+
 private:
 	vector<string> traversal;
 	map<string, vector<string> > path;
@@ -30,6 +36,7 @@ private:
 	int clock;
 
 	void dfs(shared_ptr<Node> source);
+	void topologicalSort(shared_ptr<Node> source, stack<shared_ptr<Node> >& stk, bool& isDAG);
 };
 
 #endif

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="GraphStuff" InternalType="Console">
   <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00010001N0005Debug000000000000]]>
+    </Plugin>
     <Plugin Name="CMakePlugin">
       <![CDATA[[{
   "name": "Debug",
@@ -12,9 +15,6 @@
   "arguments": [],
   "parentProject": ""
  }]]]>
-    </Plugin>
-    <Plugin Name="qmake">
-      <![CDATA[00010001N0005Debug000000000000]]>
     </Plugin>
   </Plugins>
   <Description/>
@@ -36,6 +36,7 @@
     <File Name="ConsoleApplication2/targetver.h" ExcludeProjConfig="Debug"/>
     <File Name="ConsoleApplication2/ShortestPaths.hpp"/>
     <File Name="ConsoleApplication2/ShortestPaths.cpp"/>
+    <File Name="ConsoleApplication2/directed.txt"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
